@@ -1,14 +1,7 @@
 import torch
 import torch.nn as nn
 import einops
-'''
-    论文地址：https://arxiv.org/pdf/2303.15446.pdf
-    论文题目：SwiftFormer: Efﬁcient Additive Attention for Transformer-based Real-time Mobile Vision Applications（ICCV 2023）
-    中文题目：SwiftFormer：基于Transformer的实时移动视觉应用中的高效加性注意
-    讲解视频：https://www.bilibili.com/video/BV1HVSEYDEzG/
-         加性注意力机制:
-         有效地用线性元素乘法替换了二次方的矩阵乘法运算。我们的设计表明，可以替换为一个线性层而不会牺牲任何准确性。
-'''
+
 class EfficientAdditiveAttnetion(nn.Module):
     def __init__(self, in_dims=512, token_dim=256, num_heads=2):    
         '''
