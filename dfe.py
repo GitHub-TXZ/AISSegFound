@@ -1,13 +1,6 @@
 import torch
 import torch.nn as nn
-"""
-    论文地址：https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303670
-    论文题目：DAU-Net: Dual attention-aided U-Net for segmenting tumor in breast ultrasound images
-    中文题目：DAU-Net：用于乳腺超声图像中肿瘤分割的双重注意力辅助 U-Net
-    讲解视频：https://www.bilibili.com/video/BV1JYqqYiEum/
-        1、CBAM 通过通道注意力（CAM）和空间注意力（SAM）捕获上下文感知特征和空间关系。
-        2、PAM 通过卷积层和注意力机制丰富局部特征并捕获空间关系，两者结合增强了模型对局部特征的表示能力。
-"""
+
 
 class ChannelAttentionModule(nn.Module):  # 定义通道注意力模块
     def __init__(self, in_channels, ratio=8):  # 初始化函数，设置输入通道数和缩放比例
