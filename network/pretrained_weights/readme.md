@@ -1,0 +1,1 @@
+Note: put the SegVoL model checkpoint in this folder.

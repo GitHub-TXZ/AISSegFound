@@ -1,0 +1,368 @@
+{
+    "dataset_name": "Dataset001_Test",
+    "plans_name": "nnUNetPlans",
+    "original_median_spacing_after_transp": [
+        10.0,
+        0.8600000143051147,
+        0.8600000143051147
+    ],
+    "original_median_shape_after_transp": [
+        16,
+        256,
+        256
+    ],
+    "image_reader_writer": "SimpleITKIO",
+    "transpose_forward": [
+        0,
+        1,
+        2
+    ],
+    "transpose_backward": [
+        0,
+        1,
+        2
+    ],
+    "configurations": {
+        "2d": {
+            "data_identifier": "nnUNetPlans_2d",
+            "preprocessor_name": "DefaultPreprocessor",
+            "batch_size": 5,
+            "patch_size": [
+                256,
+                256
+            ],
+            "median_image_size_in_voxels": [
+                256.0,
+                256.0
+            ],
+            "spacing": [
+                0.8600000143051147,
+                0.8600000143051147
+            ],
+            "normalization_schemes": [
+                "ZScoreNormalization",
+                "ZScoreNormalization",
+                "ZScoreNormalization",
+                "ZScoreNormalization",
+                "CTNormalization"
+            ],
+            "use_mask_for_norm": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "UNet_class_name": "PlainConvUNet",
+            "UNet_base_num_features": 32,
+            "n_conv_per_stage_encoder": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "n_conv_per_stage_decoder": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "num_pool_per_axis": [
+                6,
+                6
+            ],
+            "pool_op_kernel_sizes": [
+                [
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    2
+                ],
+                [
+                    2,
+                    2
+                ],
+                [
+                    2,
+                    2
+                ],
+                [
+                    2,
+                    2
+                ],
+                [
+                    2,
+                    2
+                ],
+                [
+                    2,
+                    2
+                ]
+            ],
+            "conv_kernel_sizes": [
+                [
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3
+                ]
+            ],
+            "unet_max_num_features": 512,
+            "resampling_fn_data": "resample_data_or_seg_to_shape",
+            "resampling_fn_seg": "resample_data_or_seg_to_shape",
+            "resampling_fn_data_kwargs": {
+                "is_seg": false,
+                "order": 3,
+                "order_z": 0,
+                "force_separate_z": null
+            },
+            "resampling_fn_seg_kwargs": {
+                "is_seg": true,
+                "order": 1,
+                "order_z": 0,
+                "force_separate_z": null
+            },
+            "resampling_fn_probabilities": "resample_data_or_seg_to_shape",
+            "resampling_fn_probabilities_kwargs": {
+                "is_seg": false,
+                "order": 1,
+                "order_z": 0,
+                "force_separate_z": null
+            },
+            "batch_dice": true
+        },
+        "3d_fullres": {
+            "data_identifier": "nnUNetPlans_3d_fullres",
+            "preprocessor_name": "DefaultPreprocessor",
+            "batch_size": 2,
+            "patch_size": [
+                16,
+                256,
+                256
+            ],
+            "median_image_size_in_voxels": [
+                16.0,
+                256.0,
+                256.0
+            ],
+            "spacing": [
+                10.0,
+                0.8600000143051147,
+                0.8600000143051147
+            ],
+            "normalization_schemes": [
+                "ZScoreNormalization",
+                "ZScoreNormalization",
+                "ZScoreNormalization",
+                "ZScoreNormalization",
+                "CTNormalization"
+            ],
+            "use_mask_for_norm": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "UNet_class_name": "PlainConvUNet",
+            "UNet_base_num_features": 32,
+            "n_conv_per_stage_encoder": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "n_conv_per_stage_decoder": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "num_pool_per_axis": [
+                2,
+                6,
+                6
+            ],
+            "pool_op_kernel_sizes": [
+                [
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    1,
+                    2,
+                    2
+                ],
+                [
+                    1,
+                    2,
+                    2
+                ],
+                [
+                    1,
+                    2,
+                    2
+                ],
+                [
+                    2,
+                    2,
+                    2
+                ],
+                [
+                    2,
+                    2,
+                    2
+                ],
+                [
+                    1,
+                    2,
+                    2
+                ]
+            ],
+            "conv_kernel_sizes": [
+                [
+                    1,
+                    3,
+                    3
+                ],
+                [
+                    1,
+                    3,
+                    3
+                ],
+                [
+                    1,
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3,
+                    3
+                ],
+                [
+                    3,
+                    3,
+                    3
+                ]
+            ],
+            "unet_max_num_features": 320,
+            "resampling_fn_data": "resample_data_or_seg_to_shape",
+            "resampling_fn_seg": "resample_data_or_seg_to_shape",
+            "resampling_fn_data_kwargs": {
+                "is_seg": false,
+                "order": 3,
+                "order_z": 0,
+                "force_separate_z": null
+            },
+            "resampling_fn_seg_kwargs": {
+                "is_seg": true,
+                "order": 1,
+                "order_z": 0,
+                "force_separate_z": null
+            },
+            "resampling_fn_probabilities": "resample_data_or_seg_to_shape",
+            "resampling_fn_probabilities_kwargs": {
+                "is_seg": false,
+                "order": 1,
+                "order_z": 0,
+                "force_separate_z": null
+            },
+            "batch_dice": false
+        }
+    },
+    "experiment_planner_used": "ExperimentPlanner",
+    "label_manager": "LabelManager",
+    "foreground_intensity_properties_per_channel": {
+        "0": {
+            "max": 3856.0,
+            "mean": 151.89840698242188,
+            "median": 98.0,
+            "min": 0.0,
+            "percentile_00_5": 0.0,
+            "percentile_99_5": 1278.0,
+            "std": 193.82769775390625
+        },
+        "1": {
+            "max": 715.0,
+            "mean": 24.00366973876953,
+            "median": 17.0,
+            "min": 0.0,
+            "percentile_00_5": 0.0,
+            "percentile_99_5": 162.0,
+            "std": 29.236608505249023
+        },
+        "2": {
+            "max": 40.0,
+            "mean": 10.697041511535645,
+            "median": 9.899999618530273,
+            "min": 0.0,
+            "percentile_00_5": 0.0,
+            "percentile_99_5": 40.0,
+            "std": 7.316181182861328
+        },
+        "3": {
+            "max": 40.0,
+            "mean": 10.450089454650879,
+            "median": 6.0,
+            "min": 0.0,
+            "percentile_00_5": 0.0,
+            "percentile_99_5": 40.0,
+            "std": 10.82445240020752
+        },
+        "4": {
+            "max": 582.0,
+            "mean": 51.46601867675781,
+            "median": 52.000003814697266,
+            "min": -1.1056661605834961e-05,
+            "percentile_00_5": -1.1056661605834961e-05,
+            "percentile_99_5": 87.0,
+            "std": 18.276857376098633
+        }
+    }
+}

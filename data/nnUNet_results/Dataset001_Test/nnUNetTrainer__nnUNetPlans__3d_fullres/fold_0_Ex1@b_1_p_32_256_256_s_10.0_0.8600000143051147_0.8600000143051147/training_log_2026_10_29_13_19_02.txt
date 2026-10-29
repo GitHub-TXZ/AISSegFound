@@ -1,0 +1,48 @@
+
+#######################################################################
+Please cite the following paper when using nnU-Net:
+Isensee, F., Jaeger, P. F., Kohl, S. A., Petersen, J., & Maier-Hein, K. H. (2021). nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nature methods, 18(2), 203-211.
+#######################################################################
+ 
+
+This is the configuration used by this training:
+Configuration name: 3d_fullres
+ {'data_identifier': 'nnUNetPlans_3d_fullres', 'preprocessor_name': 'DefaultPreprocessor', 'batch_size': 1, 'patch_size': [32, 256, 256], 'median_image_size_in_voxels': [16.0, 256.0, 256.0], 'spacing': [10.0, 0.8600000143051147, 0.8600000143051147], 'normalization_schemes': ['ZScoreNormalization', 'ZScoreNormalization', 'ZScoreNormalization', 'ZScoreNormalization', 'CTNormalization'], 'use_mask_for_norm': [False, False, False, False, False], 'UNet_class_name': 'PlainConvUNet', 'UNet_base_num_features': 32, 'n_conv_per_stage_encoder': [2, 2, 2, 2, 2, 2, 2], 'n_conv_per_stage_decoder': [2, 2, 2, 2, 2, 2], 'num_pool_per_axis': [2, 6, 6], 'pool_op_kernel_sizes': [[1, 1, 1], [1, 2, 2], [1, 2, 2], [1, 2, 2], [2, 2, 2], [2, 2, 2], [1, 2, 2]], 'conv_kernel_sizes': [[1, 3, 3], [1, 3, 3], [1, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]], 'unet_max_num_features': 320, 'resampling_fn_data': 'resample_data_or_seg_to_shape', 'resampling_fn_seg': 'resample_data_or_seg_to_shape', 'resampling_fn_data_kwargs': {'is_seg': False, 'order': 3, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_seg_kwargs': {'is_seg': True, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'resampling_fn_probabilities': 'resample_data_or_seg_to_shape', 'resampling_fn_probabilities_kwargs': {'is_seg': False, 'order': 1, 'order_z': 0, 'force_separate_z': None}, 'batch_dice': False} 
+ 
+These are the global plan.json settings:
+ {'dataset_name': 'Dataset001_Test', 'plans_name': 'nnUNetPlans', 'original_median_spacing_after_transp': [10.0, 0.8600000143051147, 0.8600000143051147], 'original_median_shape_after_transp': [16, 256, 256], 'image_reader_writer': 'SimpleITKIO', 'transpose_forward': [0, 1, 2], 'transpose_backward': [0, 1, 2], 'experiment_planner_used': 'ExperimentPlanner', 'label_manager': 'LabelManager', 'foreground_intensity_properties_per_channel': {'0': {'max': 3856.0, 'mean': 151.89840698242188, 'median': 98.0, 'min': 0.0, 'percentile_00_5': 0.0, 'percentile_99_5': 1278.0, 'std': 193.82769775390625}, '1': {'max': 715.0, 'mean': 24.00366973876953, 'median': 17.0, 'min': 0.0, 'percentile_00_5': 0.0, 'percentile_99_5': 162.0, 'std': 29.236608505249023}, '2': {'max': 40.0, 'mean': 10.697041511535645, 'median': 9.899999618530273, 'min': 0.0, 'percentile_00_5': 0.0, 'percentile_99_5': 40.0, 'std': 7.316181182861328}, '3': {'max': 40.0, 'mean': 10.450089454650879, 'median': 6.0, 'min': 0.0, 'percentile_00_5': 0.0, 'percentile_99_5': 40.0, 'std': 10.82445240020752}, '4': {'max': 582.0, 'mean': 51.46601867675781, 'median': 52.000003814697266, 'min': -1.1056661605834961e-05, 'percentile_00_5': -1.1056661605834961e-05, 'percentile_99_5': 87.0, 'std': 18.276857376098633}}} 
+ 
+2026-10-29 13:19:04.563432: unpacking dataset... 
+2026-10-29 13:19:07.580104: unpacking done... 
+2026-10-29 13:19:07.581050: do_dummy_2d_data_aug: True 
+2026-10-29 13:19:07.581527: Using splits from existing split file: /home/wangyh/aisctSAM/AISSegFound/data/nnUNet_preprocessed/Dataset001_Test/splits_final.json 
+2026-10-29 13:19:07.581654: The split file contains 5 splits. 
+2026-10-29 13:19:07.581684: Desired fold for training: 0 
+2026-10-29 13:19:07.581712: This split has 4 training and 2 validation cases. 
+2026-10-29 13:19:07.619998: Unable to plot network architecture: 
+2026-10-29 13:19:07.620139: No module named 'IPython' 
+2026-10-29 13:19:07.659620:  
+2026-10-29 13:19:07.659762: Epoch 0 
+2026-10-29 13:19:07.659960: Current learning rate: 0.0001 
+2026-10-29 13:24:24.347110: train_loss 0.7024 
+2026-10-29 13:24:24.348102: val_loss 0.6733 
+2026-10-29 13:24:24.348261: Pseudo dice [0.127] 
+2026-10-29 13:24:24.348329: Epoch time: 316.69 s 
+2026-10-29 13:24:24.348389: Yayy! New best EMA pseudo Dice: 0.127 
+2026-10-29 13:24:26.137762:  
+2026-10-29 13:24:26.137925: Epoch 1 
+2026-10-29 13:24:26.138033: Current learning rate: 5e-05 
+2026-10-29 13:29:30.359925: train_loss 0.6608 
+2026-10-29 13:29:30.360279: val_loss 0.6535 
+2026-10-29 13:29:30.360338: Pseudo dice [0.1814] 
+2026-10-29 13:29:30.360401: Epoch time: 304.23 s 
+2026-10-29 13:29:30.360442: Yayy! New best EMA pseudo Dice: 0.1325 
+2026-10-29 13:29:36.520905: Training done. 
+2026-10-29 13:29:36.755340: Using splits from existing split file: /home/wangyh/aisctSAM/AISSegFound/data/nnUNet_preprocessed/Dataset001_Test/splits_final.json 
+2026-10-29 13:29:36.755690: The split file contains 5 splits. 
+2026-10-29 13:29:36.755729: Desired fold for training: 0 
+2026-10-29 13:29:36.755758: This split has 4 training and 2 validation cases. 
+2026-10-29 13:29:36.755882: predicting case_1 
+2026-10-29 13:29:44.797194: predicting case_2 
+2026-10-29 13:29:54.225101: Validation complete 
+2026-10-29 13:29:54.225228: Mean Validation Dice:  0.27418570398991804 

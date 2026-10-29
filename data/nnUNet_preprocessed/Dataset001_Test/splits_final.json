@@ -1,0 +1,102 @@
+[
+    {
+        "all": [
+            "case_1",
+            "case_2",
+            "case_3",
+            "case_4",
+            "case_5",
+            "case_6"
+        ],
+        "train": [
+            "case_3",
+            "case_4",
+            "case_5",
+            "case_6"
+        ],
+        "val": [
+            "case_1",
+            "case_2"
+        ]
+    },
+    {
+        "all": [
+            "case_1",
+            "case_2",
+            "case_3",
+            "case_4",
+            "case_5",
+            "case_6"
+        ],
+        "train": [
+            "case_1",
+            "case_4",
+            "case_5",
+            "case_6"
+        ],
+        "val": [
+            "case_2",
+            "case_3"
+        ]
+    },
+    {
+        "all": [
+            "case_1",
+            "case_2",
+            "case_3",
+            "case_4",
+            "case_5",
+            "case_6"
+        ],
+        "train": [
+            "case_1",
+            "case_2",
+            "case_5",
+            "case_6"
+        ],
+        "val": [
+            "case_3",
+            "case_4"
+        ]
+    },
+    {
+        "all": [
+            "case_1",
+            "case_2",
+            "case_3",
+            "case_4",
+            "case_5",
+            "case_6"
+        ],
+        "train": [
+            "case_1",
+            "case_2",
+            "case_3",
+            "case_6"
+        ],
+        "val": [
+            "case_4",
+            "case_5"
+        ]
+    },
+    {
+        "all": [
+            "case_1",
+            "case_2",
+            "case_3",
+            "case_4",
+            "case_5",
+            "case_6"
+        ],
+        "train": [
+            "case_1",
+            "case_2",
+            "case_3",
+            "case_4"
+        ],
+        "val": [
+            "case_5",
+            "case_6"
+        ]
+    }
+]

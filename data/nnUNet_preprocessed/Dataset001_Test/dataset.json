@@ -1,0 +1,17 @@
+{
+    "labels": {
+        "background": 0,
+        "ischemic_stroke_lesion": 1
+    },
+    "name": "Test",
+    "numTraining": 6,
+    "release": "0.0",
+    "channel_names": {
+        "0": "CT_CBF",
+        "1": "CT_CBV",
+        "2": "CT_MTT",
+        "3": "CT_Tmax",
+        "4": "CT" 
+    },
+    "file_ending": ".nii.gz"
+}
